@@ -106,8 +106,6 @@ cout<<"VEHICLE NUMBER IS :"<<no<<"\n";
 cout<<"MODEL IS:"<<model<<"\n";
 cout<<"DRIVERS NAME IS:"<<name<<"\n";
 cout<<"IN-TIME IS :"<<hr<<":"<<min<<":"<<sec<<"\n";
-
-
 }
 
 
@@ -199,9 +197,8 @@ toread.read((char *) &arr,sizeof(arr));
 		}
 		else
 		cnt++;
-
+		
 		} //inner_for (j)
-
 		cout<<"\n";
 	} //outer_for  (i)
 
@@ -284,17 +281,14 @@ int tok,bmin,bhour=0;
 float bill=0;
 char a=179;
 
-
 ifstream toread;
 toread.open("twowheeler.bin",ios::binary);
 
 ofstream towrite;
 towrite.open("temptwowheeler.bin",ios::out|ios::binary);
 
-
 	cout<<"\nENTER THE BIKE NUMBER :\t";
 	cin>>bikno;
-
 
 	while(toread.read((char *)&tw3,sizeof(tw3)))
 	{
@@ -349,11 +343,8 @@ cprintf("IN-TIME IS : %d:%d:%d",tw3.hr,tw3.min,tw3.sec);
 		bmin=omin-tw3.min;
 		if(bhour<0)
 		bhour*=(-1);
-
 		bhour*=60;
-
 		bmin+=bhour;
-
 
 		if(bmin<0)
 		bmin*=(-bmin);
@@ -370,8 +361,6 @@ cprintf("IN-TIME IS : %d:%d:%d",tw3.hr,tw3.min,tw3.sec);
 		else
 		{//for writing in file
 		towrite.write((char *) &tw3,sizeof(tw3));
-
-
 		}
 
 	}//while loop
@@ -381,9 +370,6 @@ cprintf("IN-TIME IS : %d:%d:%d",tw3.hr,tw3.min,tw3.sec);
 		gotoxy(5,14);
 	cprintf("%s NUMBER'S BIKE IS NOT PRESENT IN PARKING",bikno);
 	}
-
-
-
 towrite.close();
 toread.close();
 
@@ -396,7 +382,6 @@ rename("temptwowheeler.bin","twowheeler.bin");
 
 void twowheeler::deletelot(int lotno)
 {
-
 int cnt=1,ch;
 
 ifstream toread;
@@ -452,8 +437,6 @@ int twowheeler::check(int blot)
 twowheeler tw4;
 ifstream toread("twowheeler.bin",ios::binary);
 
-
-
 	while(toread.read((char *)&tw4,sizeof tw4))
 	{
 
@@ -472,11 +455,8 @@ ifstream toread("twowheeler.bin",ios::binary);
 		}
 		//else
 
-
-
 	}//while loop
 		return 0;
-
 
 }
 
@@ -565,7 +545,6 @@ cprintf("!!! INCORRECT CHOICE");
 			else
 			{goto exit;}
 
-
 		     lab:
 			{
 
@@ -647,10 +626,6 @@ cout<<"IN-TIME IS :"<<tw4.hr<<":"<<tw4.min<<":"<<tw4.sec<<"\n";
 
 toread.close();
 }//read from file function
-
-
-
-
 
 	/* ***************FOUR WHEELER CLASS******************* */
 
@@ -782,8 +757,6 @@ ifstream toread("fourwheeler.bin",ios::binary);
 		}
 		//else
 
-
-
 	}//while loop
 		return 0;
 
@@ -842,7 +815,6 @@ cout<<"IN-TIME IS :"<<fw2.hr<<":"<<fw2.min<<":"<<fw2.sec<<"\n";
 
 	}//while loop
 
-
 toread.close();
 }//read from file function
 
@@ -855,17 +827,14 @@ int flag=0;
 int cmin,chour=0,clot;
 float cbill=0;
 
-
 ifstream toread;
 toread.open("fourwheeler.bin",ios::in|ios::binary);
 
 ofstream towrite;
 towrite.open("tempfourwheeler.bin",ios::out|ios::binary);
 
-
 	cout<<"\n ENTER THE CAR'S NUMBER :\t";
 	cin>>carno;
-
 
 	while(toread.read((char *)&fw3,sizeof(fw3)))
 	{
@@ -921,36 +890,23 @@ cprintf("IN-TIME IS : %d:%d:%d",fw3.hr,fw3.min,fw3.sec);
 		cmin=omin-fw3.min;
 		if(chour<0)
 		chour*=(-1);
-
 		chour*=60;
-
 		cmin+=chour;
-
-
 		if(cmin<0)
 		cmin*=(-cmin);
-
 		cbill=(cmin*1);
-
 		gotoxy(5,11);
 		cprintf("TOTAL MINUITES ARE : %d",cmin);
 		gotoxy(5,12);
 		cprintf("TOTAL BILL IS =  %f",cbill);
 		gotoxy(5,14);
 		cprintf("***THANK YOU VISIT AGAIN***");
-
-
 		}  //if
 
 		else
 		{//for writing in file
 		towrite.write((char *) &fw3,sizeof(fw3));
-
-
 		}
-
-
-
 
 	}//while loop
 
@@ -1082,8 +1038,7 @@ flag=1;
 		cout<<"ENTER DRIVER'S NAME :\t";
 		cin>>scdriver;
 		}
-
-
+		
 	while(toread.read((char *)&fw5,sizeof(fw5)))
 	{
 
@@ -1166,7 +1121,6 @@ if(flag==0)
 return 1;
 }//search
 
-
 /*--------------------------VOID DISPLAY_ALL()---------------------------------*/
 
 void fourwheeler::display_all(fourwheeler fw4)
@@ -1192,11 +1146,6 @@ cout<<"IN-TIME IS :"<<fw4.hr<<":"<<fw4.min<<":"<<fw4.sec<<"\n";
 toread.close();
 
 }//read from file function
-
-
-
-
-
 
 	/* ***************MAIN_SCREEN******************* */
 
@@ -1650,12 +1599,8 @@ cprintf("]");
 gotoxy(66,15);
 cin>>choice;
 
-
-
 clrscr();
 }while(choice=='y'||choice=='Y');
-
-
 
 }//home
 	/* ***************VOID MAIN******************* */
