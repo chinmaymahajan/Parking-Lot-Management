@@ -1,13 +1,13 @@
-# parking_lot_management
+# Parking Lot Management
 
-This is a academic project developed in C++.
-Basic idea was to make the manual parking system automatic i.e computerized.
-This is admin side product, gives full privileges to maintain record to administrator.
+This is a academic project developed in C++.<br />
+Basic idea was to make the manual parking system automatic i.e computerized. <br />
+This is admin side product, gives full privileges to maintain record to administrator. <br />
 
-Little C graphic is used to give better UI.
-All the data is maintained in binary file system.
+C graphic is used to give better UI. <br />
+All the data is maintained in binary file system. <br />
 
-Screenshots are provided.
-Project is not executable on Cygwin but you can execute it on DOSBOX
+Screenshots are provided. <br />
+Project is not executable on Cygwin but you can execute it on DOSBOX <br />
 
-for any other help contact me @ chinmaypmahajan@gmail.com
+For any other questions contact me @ chinmaypmahajan@gmail.com
